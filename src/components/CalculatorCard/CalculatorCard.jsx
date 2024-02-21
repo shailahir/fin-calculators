@@ -31,7 +31,7 @@ const CalculatorCard = ({ title, subTitle, path, icon }) => {
             position={"absolute"}
             zIndex={0}
             sx={{
-              top: "-16px",
+              top: -8,
               right: "-8px",
             }}
           >
@@ -46,7 +46,7 @@ const CalculatorCard = ({ title, subTitle, path, icon }) => {
             {title}
           </Typography>
         </Box>
-        <Box sx={{ mt: 2 }}>
+        <Box sx={{ mt: 2 }} zIndex={10}>
           <Typography variant="subtitle2">{subTitle}</Typography>
         </Box>
       </CardContent>
