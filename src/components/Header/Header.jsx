@@ -4,7 +4,7 @@ import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 const Header = () => {
   return (
     <Box>
-      <AppBar color="transparent" variant="outlined" elevation={0}>
+      <AppBar color="default" variant="outlined" elevation={0}>
         <Toolbar>
           <Typography variant="h6">Financial Planning Calculators</Typography>
         </Toolbar>
