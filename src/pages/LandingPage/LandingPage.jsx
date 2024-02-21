@@ -1,6 +1,8 @@
-import { Box, Typography } from "@mui/material";
 import React from "react";
+import { Box, Grid, Typography } from "@mui/material";
+import { AVAILABLE_CALCULATORS } from "./constants";
 import { BreadcrumbsComp } from "../../components/BreadcrumbsComp";
+import { CalculatorCard } from "../../components/CalculatorCard";
 
 const LandingPage = () => {
   return (
@@ -11,7 +13,19 @@ const LandingPage = () => {
       <Box sx={{ mt: 2 }}>
         <Typography>Calculators</Typography>
       </Box>
-      <Box sx={{ mt: 1 }}>List of the Calculators</Box>
+      <Box sx={{ mt: 1 }}>
+        <Grid container spacing={2}>
+          {AVAILABLE_CALCULATORS.map((cal, index) => (
+            <Grid key={index} item sx={2}>
+              <CalculatorCard
+                title={cal?.title}
+                subTitle={cal?.subTitle}
+                path={cal?.path}
+              />
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
     </Box>
   );
 };
