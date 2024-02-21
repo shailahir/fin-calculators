@@ -16,11 +16,12 @@ const LandingPage = () => {
       <Box sx={{ mt: 1 }}>
         <Grid container spacing={2}>
           {AVAILABLE_CALCULATORS.map((cal, index) => (
-            <Grid key={index} item sx={2}>
+            <Grid key={index} item>
               <CalculatorCard
                 title={cal?.title}
                 subTitle={cal?.subTitle}
                 path={cal?.path}
+                icon={cal?.icon}
               />
             </Grid>
           ))}
